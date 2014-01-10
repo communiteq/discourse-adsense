@@ -9,6 +9,7 @@ Installation
 * Run `rake plugin:install repo=http://github.com/discoursehosting/discourse-adsense` in your discourse directory
 * In development mode, run `rake assets:clean`
 * In production, recompile your assets: `rake assets:precompile`
+* Restart Discourse
 
 Usage
 =====
