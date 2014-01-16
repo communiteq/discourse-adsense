@@ -4,7 +4,7 @@ adsense_plugin:
     default: ''
   adsense_show_topiclist_top:
     client: true
-    default: true
+    default: false
   adsense_ad_slot_topiclist_top:
     client: true
     default: ''
@@ -13,7 +13,7 @@ adsense_plugin:
     default: ''
   adsense_show_topic_top:
     client: true
-    default: true
+    default: false
   adsense_ad_slot_topic_top:
     client: true
     default: ''
@@ -22,7 +22,7 @@ adsense_plugin:
     default: ''
   adsense_show_topic_bottom:
     client: true
-    default: true
+    default: false
   adsense_ad_slot_topic_bottom:
     client: true
     default: ''
