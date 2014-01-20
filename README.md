@@ -6,9 +6,9 @@ Google AdSense plugin for Discourse forum
 Installation
 ============
 
-* Run `rake plugin:install repo=http://github.com/discoursehosting/discourse-adsense` in your discourse directory
-* In development mode, run `rake assets:clean`
-* In production, recompile your assets: `rake assets:precompile`
+* Run `bundle exec rake plugin:install repo=http://github.com/discoursehosting/discourse-adsense` in your discourse directory
+* In development mode, run `bundle exec rake assets:clean`
+* In production, recompile your assets: `bundle exec rake assets:precompile`
 * Restart Discourse
 
 Usage
