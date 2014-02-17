@@ -11,6 +11,8 @@ Installation
 * In production, recompile your assets: `bundle exec rake assets:precompile`
 * Restart Discourse
 
+* Minimum Discourse version: v0.9.8.5
+
 Usage
 =====
 
