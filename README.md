@@ -22,6 +22,13 @@ Usage
 * Copy the slot id # numbers (ten digits shown in the ID column) in the Discourse settings
 * Enable the slots you want to use
 
+* You can use the 'adsense_through_trust_level' to disable ads for users above a certain trust level. 
+ - 0 only shows to users that are not logged in
+ - 1 shows ads to users that are not logged in, and to new and basic users
+ - 2 shows ads to regular users as well, but not to leaders and elders
+ - 3 shows ads to everyone but elders
+ - 4 shows ads to everyone including elders
+ 
 License
 =======
 

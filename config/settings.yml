@@ -29,3 +29,6 @@ adsense_plugin:
   adsense_ad_slot_topic_bottom_mobile:
     client: true
     default: ''
+  adsense_through_trust_level:
+    client: true
+    default: 2
