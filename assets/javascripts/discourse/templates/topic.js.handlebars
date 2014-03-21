@@ -42,7 +42,7 @@
               {{boundCategoryLink category}}
               {{#if details.loaded}}
                 {{topicStatus topic=model}}
-                <a href='{{unbound url}}'>
+                <a href='{{unbound url}}' {{action jumpTop}}>
                   {{#if topicSaving}}
                     {{fancy_title}}
                   {{else}}
@@ -162,7 +162,7 @@
   {{render quoteButton}}
 {{/if}}
 
-{{#if currentUser.staff}}
+{{#if currentUser.canManageTopic}}
   {{render topicAdminMenu content}}
 {{/if}}
 
