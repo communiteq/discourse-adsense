@@ -39,7 +39,7 @@
 
               {{boundCategoryLink category}}
               {{#if details.loaded}}
-                {{topicStatus topic=model}}
+                {{topic-status topic=model}}
                 <a href='{{unbound url}}' {{action jumpTop}}>
                   {{#if topicSaving}}
                     {{fancy_title}}
@@ -49,12 +49,12 @@
                 </a>
               {{/if}}
 
-
               {{#if details.can_edit}}
                 <a href='#' {{action editTopic}} class='edit-topic' title='{{i18n edit}}'><i class="fa fa-pencil"></i></a>
               {{/if}}
             </h1>
           {{/if}}
+          {{plugin-outlet "topic-title"}}
         </div>
       </div>
     </div>
@@ -86,11 +86,12 @@
                                  idProperty="post_number"
                                  defaultHeight="200"
                                  content=postStream.posts
-                                 slackRatio=slackRatio
+                                 slackRatio="15"
                                  loadingHTML=controller.loadingHTML
                                  preservesContext="true"
                                  uncloakDefault="true"
-                                 offsetFixed="header"}}
+                                 offsetFixedTop="header"
+                                 offsetFixedBottom="#reply-control"}}
           {{/unless}}
 
           {{#if postStream.loadingBelow}}
@@ -158,11 +159,10 @@
 {{render "posterExpansion"}}
 
 {{#if currentUser.enable_quoting}}
-  {{render "quoteButton"}}
+  {{render "quote-button"}}
 {{/if}}
 
 {{#if currentUser.canManageTopic}}
   {{render "topicAdminMenu" content}}
 {{/if}}
 
-{{customHTML "bottom"}}
