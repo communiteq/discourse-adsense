@@ -49,6 +49,7 @@
                 </a>
               {{/if}}
 
+
               {{#if details.can_edit}}
                 <a href='#' {{action editTopic}} class='edit-topic' title='{{i18n edit}}'><i class="fa fa-pencil"></i></a>
               {{/if}}
@@ -63,6 +64,7 @@
   <div class="container posts">
 
     {{view Discourse.SelectedPostsView}}
+
     <div class="row">
       <section class="topic-area" id='topic' data-topic-id='{{unbound id}}'>
         <div class='posts-wrapper'>
@@ -102,6 +104,7 @@
             {{else}}
               {{adsenseBlock "728" "90" "topic_bottom"}}
             {{/if}}
+
             {{view 'topic-closing' topic=model}}
             {{view 'topic-footer-buttons' topic=model}}
 
@@ -126,17 +129,19 @@
 {{else}}
   {{#if hasError}}
     <div class='container'>
-      {{#if errorBodyHtml}}
+      <div class="topic-error">
         {{{errorBodyHtml}}}
-      {{/if}}
 
-      {{#if message}}
-        <div class="message">
-          <h2>{{message}}</h2>
+        {{#if message}}
+          {{message}}
           {{#unless currentUser}}
-            <button {{action showLogin}} class='btn btn-primary btn-small'>{{i18n log_in}}</button>
+            <button {{action showLogin}} class='btn btn-primary btn-small'><i class="fa fa-user"></i>{{i18n log_in}}</button>
           {{/unless}}
-        </div>
+        {{/if}}
+        <button class="btn btn-primary topic-retry" {{action retryLoading}}>{{i18n errors.buttons.again}}</button>
+      </div>
+      {{#if retrying}}
+        <div class='spinner'>{{i18n loading}}</div>
       {{/if}}
     </div>
   {{else}}
