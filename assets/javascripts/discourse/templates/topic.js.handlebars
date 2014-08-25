@@ -114,7 +114,7 @@
               <div id='suggested-topics'>
                 <h3>{{i18n suggested_topics.title}}</h3>
                 <div class='topics'>
-                  {{basic-topic-list topics=details.suggested_topics activityAction="showTopicEntrance"}}
+                  {{basic-topic-list topics=details.suggested_topics postsAction="showTopicEntrance"}}
                 </div>
                 <h3>{{{view.browseMoreMessage}}}</h3>
               </div>
@@ -157,7 +157,6 @@
 {{/if}}
 
 {{render "share"}}
-{{render "posterExpansion"}}
 
 {{#if currentUser.enable_quoting}}
   {{render "quote-button"}}
