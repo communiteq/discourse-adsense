@@ -1,20 +1,42 @@
-discourse-adsense
-=================
+# discourse-adsense
 
 Google AdSense plugin for Discourse forum
 
-Installation
-============
+## Installation
+
+* Minimum Discourse version: v1.1
+
+### Non-docker installation
 
 * Run `bundle exec rake plugin:install repo=http://github.com/discoursehosting/discourse-adsense` in your discourse directory
 * In development mode, run `bundle exec rake assets:clean`
 * In production, recompile your assets: `bundle exec rake assets:precompile`
 * Restart Discourse
 
-* Minimum Discourse version: v0.9.9.18
+### Docker installation
 
-Usage
-=====
+As seen in a [how-to on meta.discourse.org](https://meta.discourse.org/t/advanced-troubleshooting-with-docker/15927#Example:%20Install%20a%20plugin), simply **add the plugin's repo url to your container's app.yml file**:
+
+```yml
+hooks:
+  after_code:
+    - exec:
+        cd: $home/plugins
+        cmd:
+          - mkdir -p plugins
+          - git clone https://github.com/discourse/docker_manager.git
+          - git clone https://github.com/tcreativo/plugin_discourse_dynamic_sidebar.git
+```
+* Rebuild the container
+
+```
+cd /var/docker
+git pull
+./launcher rebuild app
+```
+
+
+## Usage
 
 * Go to Admin -> Settings -> AdSense
 * Enter your AdSense publisher ID (ca-pub-xxxxxxxxxxxxxxxx)
@@ -30,7 +52,6 @@ Usage
  - 3 shows ads to everyone but elders
  - 4 shows ads to everyone including elders
  
-License
-=======
+## License
 
 GPL v2
