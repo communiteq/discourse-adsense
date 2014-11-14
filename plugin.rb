@@ -1,6 +1,6 @@
 # name: Discourse Adsense
 # about: Adds Adsense to Discourse
-# version: 1.1
+# version: 1.1.1
 # author: DiscourseHosting.com
 # minimum Discourse version: v1.1
 
