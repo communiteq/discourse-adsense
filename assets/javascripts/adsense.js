@@ -27,7 +27,7 @@
 
   function __push() {
     var i = $('.adsense').size();
-    var j = $('.adsense ins ins').size();
+    var j = $('.adsense .adsbygoogle ins ins').size();
  
     $('ins.adsbygoogle').each(function(){
       if ($(this).html() == '') {
@@ -43,7 +43,8 @@
     var ads = document.getElementById("adsense_loader");
     if (ads) {
       // clear the old element and its state
-      ads.remove();
+      //ads.remove();
+      ads.parentNode.removeChild(ads);
       for (key in window) {
         if (key.indexOf("google") !== -1){
           window[key] = undefined;
