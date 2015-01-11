@@ -4,6 +4,12 @@
   {{discourse-banner user=currentUser banner=site.banner overlay=view.hasScrolled hide=errorLoading}}
 </div>
 
+{{#if Discourse.Mobile.mobileView}}
+{{adsenseBlock "320" "50" "topic_top_mobile"}}
+{{else}}
+{{adsenseBlock "728" "90" "topic_top"}}
+{{/if}}
+
 {{#if postStream.loaded}}
   {{#if postStream.firstPostPresent}}
     <div id='topic-title'>
@@ -90,7 +96,13 @@
 
             {{view 'topic-closing' topic=model}}
             {{view 'topic-footer-buttons' topic=model}}
-
+            
+            {{#if Discourse.Mobile.mobileView}}
+              {{adsenseBlock "320" "50" "topic_bottom_mobile"}}
+            {{else}}
+               {{adsenseBlock "728" "90" "topic_bottom"}}
+            {{/if}}
+            
             {{#if details.suggested_topics.length}}
               <div id='suggested-topics'>
                 <h3>{{i18n 'suggested_topics.title'}}</h3>
