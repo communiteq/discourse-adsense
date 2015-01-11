@@ -88,13 +88,8 @@
           {{loading-spinner condition=postStream.loadingBelow}}
         </div>
         <div id='topic-bottom'></div>
-
         {{#loading-spinner condition=postStream.loadingFilter}}
-        {{#if Discourse.Mobile.mobileView}}
-          {{adsenseBlock "320" "50" "topic_bottom_mobile"}}
-        {{else}}
-          {{adsenseBlock "728" "90" "topic_bottom"}}
-          {{#if loadedAllPosts}}
+        
 
             {{view 'topic-closing' topic=model}}
             {{view 'topic-footer-buttons' topic=model}}
@@ -111,7 +106,11 @@
 
           {{/if}}
         {{/loading-spinner}}
-
+      {{#if Discourse.Mobile.mobileView}}
+          {{adsenseBlock "320" "50" "topic_bottom_mobile"}}
+        {{else}}
+          {{adsenseBlock "728" "90" "topic_bottom"}}
+      {{#if loadedAllPosts}}
       </section>
     </div>
 
