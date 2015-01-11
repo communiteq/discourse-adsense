@@ -3,11 +3,7 @@
   {{global-notice}}
   {{discourse-banner user=currentUser banner=site.banner overlay=view.hasScrolled hide=errorLoading}}
 </div>
-{{#if Discourse.Mobile.mobileView}}
-  {{adsenseBlock "320" "50" "topic_top_mobile"}}
-{{else}}
-  {{adsenseBlock "728" "90" "topic_top"}}
-  
+
 {{#if postStream.loaded}}
   {{#if postStream.firstPostPresent}}
     <div id='topic-title'>
@@ -88,8 +84,9 @@
           {{loading-spinner condition=postStream.loadingBelow}}
         </div>
         <div id='topic-bottom'></div>
+
         {{#loading-spinner condition=postStream.loadingFilter}}
-        
+          {{#if loadedAllPosts}}
 
             {{view 'topic-closing' topic=model}}
             {{view 'topic-footer-buttons' topic=model}}
@@ -106,11 +103,7 @@
 
           {{/if}}
         {{/loading-spinner}}
-      {{#if Discourse.Mobile.mobileView}}
-          {{adsenseBlock "320" "50" "topic_bottom_mobile"}}
-        {{else}}
-          {{adsenseBlock "728" "90" "topic_bottom"}}
-      {{#if loadedAllPosts}}
+
       </section>
     </div>
 
