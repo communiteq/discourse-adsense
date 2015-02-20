@@ -1,0 +1,13 @@
+fr:
+  site_settings: 
+    adsense_publisher_code: 'Votre code "Référence éditeur" (pub-1234)'
+    adsense_show_topiclist_top: 'Afficher de la publicité au dessus de la liste des sujets'
+    adsense_ad_slot_topiclist_top: 'ID de la publicité pour l'emplacement au dessus de la liste des sujets (728x90 ou adaptable)'
+    adsense_ad_slot_topiclist_top_mobile: 'ID de la publicité Mobile pour l'emplacement au dessus de la liste des sujets (320x50 ou adaptable)'    
+    adsense_show_topic_top: 'Afficher de la publicité au dessus des messages'
+    adsense_ad_slot_topic_top: 'ID de la publicité pour l'emplacement au dessus des messages'
+    adsense_ad_slot_topic_top_mobile: 'ID de la publicité Mobile pour l'emplacement au dessus des messages'
+    adsense_show_topic_bottom: 'Afficher de la publicité en dessous des messages'
+    adsense_ad_slot_topic_bottom: 'ID de la publicité pour l'emplacement en dessous des messages'
+    adsense_ad_slot_topic_bottom_mobile: 'ID de la publicité Mobile pour l'emplacement en dessous des messages'
+    adsense_through_trust_level: 'Afficher les publicités aux utilisateurs en fonction de leurs niveaux de confiance (0 = pour les utilisateurs non connectés uniquement ... 4 = pour tous les utilisateurs)'
