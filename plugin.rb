@@ -1,8 +1,8 @@
 # name: Discourse Adsense
 # about: Adds Adsense to Discourse
-# version: 1.1.1
+# version: 1.2.0
 # author: DiscourseHosting.com
-# minimum Discourse version: v1.1
+# Supported Discourse version: v1.2
 
 register_asset "javascripts/adsense.js"
 register_asset "javascripts/discourse/templates/discovery.hbs"
