@@ -6,24 +6,20 @@
 
 <div class='list-controls'>
   <div class="container">
-    {{outlet navigation-bar}}
+    {{outlet "navigation-bar"}}
   </div>
 </div>
 
-<div {{bind-attr class="loadingSpinner::hidden"}}>
-  {{loading-spinner}}
-</div>
+{{loading-spinner condition=loading}}
 
-
-<div {{bind-attr class=":container :list-container loadingSpinner:hidden"}}>
+<div {{bind-attr class=":container :list-container loading:hidden"}}>
   <div class="row">
     <div class="full-width">
       <div id='header-list-area'>
-        {{outlet header-list-container}}
+        {{outlet "header-list-container"}}
       </div>
     </div>
   </div>
-
   <div class="row">
     <div class="full-width">
       <div id='list-area'>
@@ -32,7 +28,7 @@
         {{else}}
           {{adsenseBlock "728" "90" "topiclist_top"}}
         {{/if}}
-        {{outlet list-container}}
+        {{outlet "list-container"}}
       </div>
     </div>
   </div>
