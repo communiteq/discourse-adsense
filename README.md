@@ -24,8 +24,6 @@ hooks:
         cd: $home/plugins
         cmd:
           - mkdir -p plugins
-          - git clone https://github.com/discourse/docker_manager.git
-          - git clone https://github.com/tcreativo/plugin_discourse_dynamic_sidebar.git
           - git clone https://github.com/discoursehosting/discourse-adsense.git
 ```
 * Rebuild the container
