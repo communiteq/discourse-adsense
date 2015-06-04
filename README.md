@@ -4,7 +4,7 @@ Google AdSense plugin for Discourse forum
 
 ## Installation
 
-* Supported Discourse version: v1.2
+* Supported Discourse version: v1.3
 
 ### Non-docker installation
 

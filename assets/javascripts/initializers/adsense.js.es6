@@ -1,6 +1,7 @@
-(function() {
-
-  Handlebars.registerHelper('adsenseBlock', function(width, height, slotid) {
+export default {
+  name: "apply-adsense",
+  initialize: function(container) {
+  Em.Handlebars.helper('adsenseBlock', function(width, height, slotid) {
     var currentUser = Discourse.User.current();
     if ((currentUser) && ( currentUser.get('trust_level') > Discourse.SiteSettings.adsense_through_trust_level )) {
         return "";
@@ -18,12 +19,9 @@
         '<script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>'
       );
     } 
+
     return "";
   });
-
-})();
-
-(function() {
 
   function __push() {
     var i = $('.adsense').size();
@@ -45,7 +43,7 @@
       // clear the old element and its state
       //ads.remove();
       ads.parentNode.removeChild(ads);
-      for (key in window) {
+      for (var key in window) {
         if (key.indexOf("google") !== -1){
           window[key] = undefined;
         }
@@ -63,7 +61,4 @@
       __reload_gads();
     }
   });
- 
- 
-})();
-
+}};
