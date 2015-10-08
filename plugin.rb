@@ -1,9 +1,9 @@
 # name: Discourse Adsense
 # about: Adds Adsense to Discourse
-# version: 1.3.0
+# version: 1.3.1
 # author: DiscourseHosting.com
 # url: https://www.github.com/discoursehosting/discourse-adsense
-# Supported Discourse version: v1.3
+# Supported Discourse version: v1.3 and up
 
 register_css <<CSS
 
