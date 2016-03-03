@@ -71,7 +71,7 @@ export default {
     });
 
     if (publisherCode.length) {
-      withPluginApi('0.1', initializeAdsense, oldPluginCode);
+      withPluginApi('0.1', initializeAdsense, { noApi: oldPluginCode });
     }
   }
 };
