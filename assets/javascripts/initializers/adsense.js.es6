@@ -2,8 +2,8 @@ import { withPluginApi } from 'discourse/lib/plugin-api';
 import PageTracker from 'discourse/lib/page-tracker';
 
 function __push() {
-  const i = $('.adsense').size();
-  const j = $('.adsense .adsbygoogle ins ins').size();
+  const i = $('.adsense').length;
+  const j = $('.adsense .adsbygoogle ins ins').length;
 
   $('ins.adsbygoogle').each(function(){
     if ($(this).html() === '') {
